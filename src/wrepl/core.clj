@@ -31,4 +31,4 @@
 
 (defn -main []
   (prn "http://localhost:7777/ is active")
-  (jetty/run-jetty app {:join? true :port 3000}))
+  (jetty/run-jetty app {:join? true :port 7777}))
