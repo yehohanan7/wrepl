@@ -1,4 +1,4 @@
-(defproject wrepl "0.2"
+(defproject wrepl "0.3"
   :description "A clojure repl which responds to HTTP posts"
   :url "hhttps://github.com/yehohanan7/wrepl"
   :license {:name "Eclipse Public License"

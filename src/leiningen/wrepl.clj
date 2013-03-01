@@ -13,17 +13,21 @@
     (catch Throwable t
       (str "ERROR: " t))))
 
-(defn json-response [data & [status]]
-  {:status (or status 200)
-   :headers {"Content-Type" "application/json"}
-   :body (json/generate-string data)})
+(defn response [data]
+  {:status 200
+   :headers {"Content-Type" "text/plain"
+             "Access-Control-Allow-Origin" "*"
+             "Access-Control-Allow-Methods" "POST, GET, OPTIONS"
+             "Access-Control-Max-Age" "1000"
+             "Access-Control-Allow-Headers" "Content-Type"}
+   :body data})
+
 
 (compojure/defroutes app
-  (compojure/POST "/wrepl/eval" request (eval-clojure request))
+  (compojure/POST "/wrepl/eval" request (response (eval-clojure request)))
   (compojure/GET "/" request
     (str "Wrepl!"))
   (route/resources "/"))
-
 
 (defn run-repl [port]
   (prn "Staring wRepl on port " port)
@@ -35,3 +39,4 @@
     (run-repl (Integer. port))
     (run-repl 7777))
   )
+
