@@ -21,7 +21,7 @@ to youse wrepl, update your project.clj like below
             :url "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.4.0"]]
   
-  :plugins [[wrepl/wrepl "0.2"]]) 
+  :plugins [[wrepl/wrepl "0.3"]]) 
   
 ```
 
