@@ -1,18 +1,19 @@
 # wrepl
 
-A leiningen plugin to start a repl which responds to http post requests. 
+A Leiningen plugin to start a REPL which responds to HTTP POST requests. 
 
 ## Usage
 ### Starting wrepl
 lein wrepl [port]
 
 ### Connecting to wrepl
-you can evaluate clojure expressions by POSTING the expression to http://localhost:port/wrepl/eval 
+You can evaluate Clojure expressions by POSTing the expression to http://localhost:port/wrepl/eval 
 
 ## Installing
 wrepl is published in [clojars](https://clojars.org/wrepl) 
 
-to youse wrepl, update your project.clj like below 
+To use wrepl, update your project.clj as shown below:
+
 ```clojure  
 (defproject yourproject "0.1.0-SNAPSHOT"
   :description "FIXME: write description"
